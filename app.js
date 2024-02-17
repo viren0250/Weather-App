@@ -7,6 +7,10 @@ const searchForm = document.querySelector("[data-searchForm]");
 const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
 
+// for location not found
+const notFound = document.querySelector(".errorContainer");
+const errorText = document.querySelector('[data-errorText]');
+const errorImage = document.querySelector('[data-errorImg]');
 
 // Initially
 let currentTab =  userTab;
@@ -176,8 +180,3 @@ async function fetchSearchWeatherInfo(city) {
         errorText.innerText = `${err?.message}`;
     }
 }
-
-// for location not found
-const notFound = document.querySelector(".errorContainer");
-const errorText = document.querySelector('[data-errorText]');
-const errorImage = document.querySelector('[data-errorImg]');
